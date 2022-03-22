@@ -9,18 +9,21 @@ def argparser():
   parser.add_argument(
       '--seq_window_lengths',
       type=int,
+      default=[8],
       nargs='+',
       help='Space seperated list of motif filter lengths. (ex, --window_lengths 4 8 12)'
   )
   parser.add_argument(
       '--smi_window_lengths',
       type=int,
+      default=[8],
       nargs='+',
       help='Space seperated list of motif filter lengths. (ex, --window_lengths 4 8 12)'
   )
   parser.add_argument(
       '--num_windows',
       type=int,
+      default=[64],
       nargs='+',
       help='Space seperated list of the number of motif filters corresponding to length list. (ex, --num_windows 100 200 100)'
   )
@@ -39,13 +42,13 @@ def argparser():
   parser.add_argument(
       '--max_seq_len',
       type=int,
-      default=0,
+      default=1000,
       help='Length of input sequences.'
   )
   parser.add_argument(
       '--max_smi_len',
       type=int,
-      default=0,
+      default=100,
       help='Length of input sequences.'
   )
   # for learning
@@ -58,7 +61,7 @@ def argparser():
   parser.add_argument(
       '--num_epoch',
       type=int,
-      default=100,
+      default=50,
       help='Number of epochs to train.'
   )
   parser.add_argument(
@@ -70,7 +73,7 @@ def argparser():
   parser.add_argument(
       '--dataset_path',
       type=str,
-      default='/data/kiba/',
+      default='data/davis/',
       help='Directory for input data.'
   )
   parser.add_argument(
@@ -100,7 +103,7 @@ def argparser():
   parser.add_argument(
       '--log_dir',
       type=str,
-      default='/tmp',
+      default='logs/',
       help='Directory for log data.'
   )
 

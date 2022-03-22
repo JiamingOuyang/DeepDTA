@@ -1,0 +1,21 @@
+Namespace(batch_size=256, binary_th=0.0, checkpoint_path='', dataset_path='data/davis/', is_log=0, learning_rate=0.001, log_dir='logs/1638773792.8569927/', max_seq_len=1000, max_smi_len=100, num_classes=0, num_epoch=2, num_hidden=0, num_windows=[64], problem_type=1, seq_window_lengths=[8], smi_window_lengths=[8])
+---Parameter Search-----
+P1 = 0,  P2 = 0, P3 = 0, Fold = 0, CI-i = 0.649305, CI-ii = 0.655787, MSE = 14959815.599202
+P1 = 0,  P2 = 0, P3 = 0, Fold = 1, CI-i = 0.640843, CI-ii = 0.646304, MSE = 15417988.160910
+P1 = 0,  P2 = 0, P3 = 0, Fold = 2, CI-i = 0.667520, CI-ii = 0.662449, MSE = 15062188.542224
+P1 = 0,  P2 = 0, P3 = 0, Fold = 3, CI-i = 0.648275, CI-ii = 0.652484, MSE = 15376826.605310
+P1 = 0,  P2 = 0, P3 = 0, Fold = 4, CI-i = 0.658040, CI-ii = 0.652922, MSE = 14625754.903973
+---Parameter Search-----
+P1 = 0,  P2 = 0, P3 = 0, Fold = 0, CI-i = 0.581729, CI-ii = 0.581011, MSE = 16108483.039521
+P1 = 0,  P2 = 0, P3 = 0, Fold = 1, CI-i = 0.614398, CI-ii = 0.619233, MSE = 15923973.370060
+P1 = 0,  P2 = 0, P3 = 0, Fold = 2, CI-i = 0.615743, CI-ii = 0.618757, MSE = 15730614.286627
+P1 = 0,  P2 = 0, P3 = 0, Fold = 3, CI-i = 0.601103, CI-ii = 0.608591, MSE = 15924156.793613
+P1 = 0,  P2 = 0, P3 = 0, Fold = 4, CI-i = 0.636349, CI-ii = 0.646582, MSE = 15898388.323353
+---FINAL RESULTS-----
+best param index = 0,  best param = 0.00000
+Test Performance CI
+[0.5817290839310125, 0.6143981590368887, 0.6157429560362221, 0.6011030819791495, 0.6363494093196205]
+Test Performance MSE
+[16108483.039520958, 15923973.37005988, 15730614.286626747, 15924156.793612774, 15898388.323353294]
+Setting 1
+avg_perf = 0.60986,  avg_mse = 15917123.16263, std = 0.01803

@@ -128,7 +128,7 @@ class DataSet(object):
     # self._num_data = len(self._raw)
 
 
-  def read_sets(self, FLAGS): ### fpath should be the dataset folder /kiba/ or /davis/
+  def read_sets(self, FLAGS): ### fpath should be the dataset folder /kiba_old/ or /davis/
     print("Reading %s start" % FLAGS.train_path)
 
     test_fold = json.load(open(FLAGS.test_path + "folds/test_fold.txt"))

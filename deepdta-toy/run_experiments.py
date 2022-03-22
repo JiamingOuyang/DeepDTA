@@ -30,7 +30,7 @@ import keras
 from keras.models import Model
 from keras.preprocessing import sequence
 from keras.models import Sequential, load_model
-from keras.layers import Dense, Dropout, Activation, Merge
+from keras.layers import Dense, Dropout, Activation, merge
 from keras.layers import Embedding
 from keras.layers import Conv1D, GlobalMaxPooling1D, MaxPooling1D
 from keras.layers.normalization import BatchNormalization
@@ -162,7 +162,7 @@ def build_single_drug(FLAGS, NUM_FILTERS, FILTER_LENGTH1, FILTER_LENGTH2):
     encode_smiles.add(GlobalMaxPooling1D())
 
 
-    interactionModel.add(Merge([encode_smiles, XTmodel], mode='concat', concat_axis=1))
+    interactionModel.add(merge([encode_smiles, XTmodel], mode='concat', concat_axis=1))
     #interactionModel.add(layers.merge.Concatenate([XDmodel, XTmodel]))
 
     # Fully connected 
@@ -197,7 +197,7 @@ def build_single_prot(FLAGS, NUM_FILTERS, FILTER_LENGTH1, FILTER_LENGTH2):
     XTmodel1.add(GlobalMaxPooling1D())
 
 
-    interactionModel.add(Merge([XDmodel, XTmodel1], mode='concat', concat_axis=1))
+    interactionModel.add(merge([XDmodel, XTmodel1], mode='concat', concat_axis=1))
 
     # Fully connected 
     interactionModel.add(Dense(1024, activation='relu'))
@@ -224,7 +224,7 @@ def build_baseline(FLAGS, NUM_FILTERS, FILTER_LENGTH1, FILTER_LENGTH2):
     XTmodel.add(Dense(1, activation='linear', input_shape=(FLAGS.target_count,)))
 
 
-    interactionModel.add(Merge([XDmodel, XTmodel], mode='concat', concat_axis=1))
+    interactionModel.add(merge([XDmodel, XTmodel], mode='concat', concat_axis=1))
 
     # Fully connected 
     interactionModel.add(Dense(1024, activation='relu'))
